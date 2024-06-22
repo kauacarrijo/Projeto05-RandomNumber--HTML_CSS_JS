@@ -8,8 +8,12 @@ let result = 0
 const randomNumber = () => {
     numberOne = Math.ceil(entre.value)
     numberTwo = Math.floor(e.value)
-    result = Math.floor(Math.random() * (numberTwo - numberOne + 1) + numberOne)
-    alert(`Seu número sorteado é: ${result}`)
+    if(numberOne >= numberTwo){
+        alert("O primeiro valor deve ser menor que o segundo valor!")
+    }else{
+        result = Math.floor(Math.random() * (numberTwo - numberOne + 1) + numberOne)
+        alert(`Seu número sorteado é: ${result}`)
+    }
 }
 
 button.addEventListener("click", randomNumber)
